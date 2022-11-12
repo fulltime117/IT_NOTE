@@ -34,8 +34,6 @@ export const Home = (props) => {
     setSearchNum(val)
   }
 
-
-
   return (
     <HomeContainer id='home'>
       <section className='anotations'>
