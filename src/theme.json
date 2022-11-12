@@ -1,0 +1,19 @@
+{
+  "fonts": {
+    "primary": {
+      "name": "Poppins",
+      "weights": [300, 400, 500, 600]
+    },
+    "special": {
+      "name": "Salsa",
+      "weights": [400]
+    }
+  },
+  "colors": {
+    "primary": "#ED1004",
+    "secondary": "#292929",
+    "white": "#FFFFFF",
+    "skyBlue": "#3AB4F7",
+    "darkRed": "#BA092F"
+  }
+}
