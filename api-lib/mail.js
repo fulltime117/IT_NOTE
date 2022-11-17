@@ -26,3 +26,14 @@ export const CONFIG = {
   // TODO: Replace with the email you want to use to send email
   from: nodemailerConfig?.auth?.user,
 };
+
+
+// transporter.sendMail(mailOption, (err, data) => {
+//   if (err) {
+//     console.log(err);
+//     res.send("error" + JSON.stringify(err));
+//   } else {
+//     console.log("mail send");
+//     res.send("success");
+//   }
+// });
