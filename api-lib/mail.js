@@ -12,9 +12,9 @@ const transporter = nodemailer.createTransport(nodemailerConfig);
 export async function sendMail({ from, to, subject, html }) {
   try {
     await transporter.sendMail({
-      from,
-      to,
-      subject,
+      from: "IT-NOTE APP",
+      to: "fulltime117@gmail.com",
+      subject: "Let's make something great!",
       html,
     });
   } catch (e) {
