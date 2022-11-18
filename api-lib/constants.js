@@ -4,12 +4,12 @@ export const ValidateProps = {
     name: { type: 'string', minLength: 1, maxLength: 50 },
     password: { type: 'string', minLength: 8 },
     email: { type: 'string', minLength: 1 },
-    bio: { type: 'string', minLength: 0, maxLength: 160 },
+    bio: { type: 'string', minLength: 0, maxLength: 400 },
   },
   post: {
-    content: { type: 'string', minLength: 1, maxLength: 280 },
+    content: { type: 'string', minLength: 1, maxLength: 500 },
   },
   comment: {
-    content: { type: 'string', minLength: 1, maxLength: 280 },
+    content: { type: 'string', minLength: 1, maxLength: 500 },
   },
 };

@@ -107,6 +107,7 @@ const Auth = () => {
 };
 
 const AboutYou = ({ user, mutate }) => {
+  const useremailRef = useRef();
   const usernameRef = useRef();
   const nameRef = useRef();
   const bioRef = useRef();
@@ -152,7 +153,10 @@ const AboutYou = ({ user, mutate }) => {
     [mutate]
   );
 
+  console.log(user)
+
   useEffect(() => {
+    useremailRef.current.value = user.email;
     usernameRef.current.value = user.username;
     nameRef.current.value = user.name;
     bioRef.current.value = user.bio;
@@ -164,15 +168,9 @@ const AboutYou = ({ user, mutate }) => {
     <section className={styles.card}>
       <h4 className={styles.sectionTitle}>About You</h4>
       <form onSubmit={onSubmit}>
-        <Input ref={usernameRef} label="Your Username" />
-        <Spacer size={0.5} axis="vertical" />
-        <Input ref={nameRef} label="Your Name" />
-        <Spacer size={0.5} axis="vertical" />
-        <Textarea ref={bioRef} label="Your Bio" />
-        <Spacer size={0.5} axis="vertical" />
         <span className={styles.label}>Your Avatar</span>
         <div className={styles.avatar}>
-          <Avatar size={96} username={user.username} url={avatarHref} />
+          <Avatar size={120} username={user.username} url={avatarHref} />
           <input
             aria-label="Your Avatar"
             type="file"
@@ -181,7 +179,15 @@ const AboutYou = ({ user, mutate }) => {
             onChange={onAvatarChange}
           />
         </div>
+        <Spacer size={1.5} axis="vertical" />
+        <Input ref={useremailRef} label="Your Email" />
         <Spacer size={0.5} axis="vertical" />
+        <Input ref={usernameRef} label="Your Username" />
+        <Spacer size={0.5} axis="vertical" />
+        <Input ref={nameRef} label="Your Name" />
+        <Spacer size={0.5} axis="vertical" />
+        <Textarea ref={bioRef} label="Your Bio" />
+        <Spacer size={1} axis="vertical" />
         <Button
           htmlType="submit"
           className={styles.submit}
